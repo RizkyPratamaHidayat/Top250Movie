@@ -26,13 +26,12 @@ import {navigate} from '../../helpers/navigationRef'
 // End Media Import / Variable Init
 
 const BannerDetailComponent = (props) => {
-    const {data} = props;
-
+    const {data,movieData} = props;
     const image = { uri: data?.image}
   return (
    <View style={styles.bannerContainer}>
         <Image source={image} style={styles.image}/>
-        <TouchableOpacity onPress={()=> navigate('MovieTrailer',{url:data?.linkEmbed})} style={styles.playBtnContainer}>
+        <TouchableOpacity onPress={()=> navigate('MovieTrailer',{url:data?.trailer?.linkEmbed})} style={styles.playBtnContainer}>
             <Image source={require('../../assets/png/Play.png')} style={styles.playLogo}/>
         </TouchableOpacity>
    </View>

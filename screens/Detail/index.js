@@ -47,7 +47,7 @@ useEffect(()=>{
 },[])
   return (
     <ScrollView style={[globalStyles.scrollViewRoot, styles.root]}>
-      <Banner data={data}/>
+      <Banner movieData={movieData} data={data}/>
       <DetailInfo movieData={movieData} data={data} />
   </ScrollView>
   );
