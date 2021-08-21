@@ -1,0 +1,1 @@
+export {set250Movies, fetch250Movies} from './generalReducer/generalReducerActions';

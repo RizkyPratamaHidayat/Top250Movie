@@ -1,0 +1,1 @@
+export const SET_250MOVIES = 'SET_250MOVIES';
