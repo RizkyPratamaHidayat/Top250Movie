@@ -18,7 +18,7 @@ import {pop} from '../../helpers/navigationRef';
 // Styling Depedencies
 import globalStyles from '../../shared/globalStyles';
 import styles from './styles';
-
+import {navigate} from '../../helpers/navigationRef'
 // End styling import
 
 // Media Import / Variable Init
