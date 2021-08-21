@@ -32,6 +32,6 @@ export default StyleSheet.create({
           lineHeight: wp(20)
       },
       title: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     }
 });

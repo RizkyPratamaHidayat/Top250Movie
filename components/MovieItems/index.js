@@ -14,7 +14,7 @@ import styles from './styles';
 import {navigate} from '../../helpers/navigationRef';
 const MoviesItem = (props) => {
     const {item} = props;
-    const image = { uri: item.image};
+    const image = { uri: item?.image};
     if(item.rank < 11){
       return null;
   }

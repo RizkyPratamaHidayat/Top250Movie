@@ -25,18 +25,21 @@ import styles from './styles';
 
 // End Media Import / Variable Init
 
-const BannerDetailComponent = (props) => {
+const DetailInfo = (props) => {
     const {data} = props;
-
-    const image = { uri: data}
+    console.log(data);
+    const image = require('../../assets/png/clock.png');
   return (
    <View style={styles.bannerContainer}>
-        <Image source={image} style={styles.image}/>
-        <TouchableOpacity onPress={()=> alert('adsads')} style={styles.playBtnContainer}>
-            <Image source={require('../../assets/png/Play.png')} style={styles.playLogo}/>
-        </TouchableOpacity>
+       <View>
+           <Text style={[globalStyles.whiteText, styles.title]}>{data?.fullTitle}</Text>
+           <View style={styles.clockContainer}>
+               <Image source={image} style={styles.clockIco} />
+               <Text style={[globalStyles.whiteText, styles.minutes]}>{data?.runtimeMins} Minutes</Text>
+           </View>
+       </View>
    </View>
   );
 };
 
-export default BannerDetailComponent;
+export default DetailInfo;

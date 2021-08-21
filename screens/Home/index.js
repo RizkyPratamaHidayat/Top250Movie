@@ -38,7 +38,7 @@ const Home = props => {
           Stream <Text style={globalStyles.whiteText}>Everywhere</Text>
         </Text>
       </View>
-      <Banner data={banner}/>
+      <Banner data={banner} />
       <Trending />
       <Movies />
     </ScrollView>

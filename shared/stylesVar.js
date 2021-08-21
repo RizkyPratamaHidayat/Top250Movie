@@ -6,5 +6,8 @@ export default {
     bg1 : '#16141f',
     darkWhite: '#ffffff',
     orange1: '#FF8F71',
+    desc: '#BCBCBC',
+    dark: '#515151',
   },
+
 };

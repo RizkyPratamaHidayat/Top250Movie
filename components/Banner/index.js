@@ -27,7 +27,7 @@ import styles from './styles';
 
 const BannerComponent = (props) => {
     const {data} = props;
-    const image = { uri: data};
+    const image = { uri: data?.thumbnailUrl}
   return (
    <View style={styles.bannerContainer}>
         <Image source={image} style={styles.image}/>
@@ -35,6 +35,7 @@ const BannerComponent = (props) => {
             <Image source={require('../../assets/png/Play.png')} style={styles.playLogo}/>
             <View style={styles.statusContainer}>
                 <Text style={[globalStyles.whiteText, styles.statusLabel]}>Continue Watching</Text>
+                <Text style={[globalStyles.whiteText, styles.title]}>{data?.fullTitle}</Text>
             </View>
         </TouchableOpacity>
    </View>

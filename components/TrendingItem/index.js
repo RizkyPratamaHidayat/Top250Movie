@@ -21,7 +21,7 @@ const TrendingItem = (props) => {
     }
   return (
     <TouchableOpacity onPress={()=> navigate('detail',{id: item.id})} style={styles.imageContainer}>
-         <Image source={image} style={styles.playLogo}/>
+         <Image source={image} style={styles?.playLogo}/>
         <View style={styles.playBtnContainer}>
             <View style={styles.statusContainer}>
                 <Text style={[globalStyles.whiteText, styles.title]}>{item.title}</Text>

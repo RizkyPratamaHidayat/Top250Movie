@@ -13,6 +13,7 @@ import {View, ScrollView, RefreshControl, Text,Button} from 'react-native';
 import {pop} from '../../helpers/navigationRef'
 // 3rd Party / Library Depedencies
 import {connect} from 'react-redux';
+import DetailInfo from '../../components/DetailInfo';
 import {getMovieDetail} from '../../helpers/request'
 import Banner from '../../components/BannerDetail';
 // End 3rd party import
@@ -44,7 +45,8 @@ useEffect(()=>{
 },[])
   return (
     <ScrollView style={[globalStyles.scrollViewRoot, styles.root]}>
-   
+      <Banner data={data?.image}/>
+      <DetailInfo data={data} />
   </ScrollView>
   );
 };
