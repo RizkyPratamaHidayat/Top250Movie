@@ -28,11 +28,11 @@ import styles from './styles';
 const BannerDetailComponent = (props) => {
     const {data} = props;
 
-    const image = { uri: data}
+    const image = { uri: data?.image}
   return (
    <View style={styles.bannerContainer}>
         <Image source={image} style={styles.image}/>
-        <TouchableOpacity onPress={()=> alert('adsads')} style={styles.playBtnContainer}>
+        <TouchableOpacity onPress={()=> navigate('MovieTrailer',{url:data?.linkEmbed})} style={styles.playBtnContainer}>
             <Image source={require('../../assets/png/Play.png')} style={styles.playLogo}/>
         </TouchableOpacity>
    </View>

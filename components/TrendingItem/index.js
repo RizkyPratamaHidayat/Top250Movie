@@ -20,7 +20,7 @@ const TrendingItem = (props) => {
         return null;
     }
   return (
-    <TouchableOpacity onPress={()=> navigate('detail',{id: item.id})} style={styles.imageContainer}>
+    <TouchableOpacity onPress={()=> navigate('detail',{id: item.id, movieData:item})} style={styles.imageContainer}>
          <Image source={image} style={styles?.playLogo}/>
         <View style={styles.playBtnContainer}>
             <View style={styles.statusContainer}>

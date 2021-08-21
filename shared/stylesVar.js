@@ -8,6 +8,7 @@ export default {
     orange1: '#FF8F71',
     desc: '#BCBCBC',
     dark: '#515151',
+    dark2: '#201f28'
   },
 
 };

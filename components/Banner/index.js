@@ -10,7 +10,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {View, ScrollView, RefreshControl, Text,Image,TouchableOpacity} from 'react-native';
 // End React Native import
-import {pop} from '../../helpers/navigationRef';
+import {navigate, pop} from '../../helpers/navigationRef';
 // 3rd Party / Library Depedencies
 
 // End 3rd party import
@@ -31,7 +31,7 @@ const BannerComponent = (props) => {
   return (
    <View style={styles.bannerContainer}>
         <Image source={image} style={styles.image}/>
-        <TouchableOpacity onPress={()=> alert('adsads')} style={styles.playBtnContainer}>
+        <TouchableOpacity onPress={()=> navigate('MovieTrailer',{url:data?.linkEmbed})} style={styles.playBtnContainer}>
             <Image source={require('../../assets/png/Play.png')} style={styles.playLogo}/>
             <View style={styles.statusContainer}>
                 <Text style={[globalStyles.whiteText, styles.statusLabel]}>Continue Watching</Text>

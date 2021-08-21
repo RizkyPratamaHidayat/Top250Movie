@@ -30,6 +30,8 @@ import styles from './styles';
 
 const Detail = (props) => {
     const {id} = props.route.params;
+    const {movieData} = props.route.params;
+    console.log('detail ', movieData)
     const [data, setData] = useState();
 
 useEffect(()=>{
@@ -45,8 +47,8 @@ useEffect(()=>{
 },[])
   return (
     <ScrollView style={[globalStyles.scrollViewRoot, styles.root]}>
-      <Banner data={data?.image}/>
-      <DetailInfo data={data} />
+      <Banner data={data}/>
+      <DetailInfo movieData={movieData} data={data} />
   </ScrollView>
   );
 };

@@ -12,6 +12,14 @@ const options = {
 
     },
   },
+  MovieTrailer:{
+    title: 'Trailer',
+    headerTintColor: stylesVar.theme.darkWhite,
+    headerStyle: {
+      backgroundColor: stylesVar.theme.bg1,
+
+    },
+  }
 };
 
 export default options;

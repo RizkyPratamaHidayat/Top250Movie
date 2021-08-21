@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import options from './navigationOptions';
 import {fetch250Movies} from '../../redux';
 import {navigationRef} from '../../helpers/navigationRef';
+import MovieTrailer from '../MovieVideo';
 import {createStackNavigator} from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
@@ -30,6 +31,12 @@ const Tabs = props => {
           component={Detail}
           options={options.detail}
         />
+        <Stack.Screen
+          name="MovieTrailer"
+          component={MovieTrailer}
+          options={options.MovieTrailer}
+        />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
